@@ -9,6 +9,7 @@ interface TestimonialProps {
 }
 
 const Testimonial: FunctionComponent<TestimonialProps> = ({
+  id,
   clientName,
   testimonial,
 }) => {

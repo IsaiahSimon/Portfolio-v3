@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from "react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Link href="/" className="font-semibold text-xl tracking-tight">
-          Isaiah Simon
+    <nav className="flex flex-wrap items-center justify-between  p-6">
+      <div className="mr-6 flex flex-shrink-0 items-center  text-white">
+        <Link href="/" className="text-xl font-semibold tracking-tight">
+          iSimonDev
         </Link>
       </div>
-      <div className="block lg:hidden">
+      <div className="block  lg:hidden">
         <button
-          className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+          className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white"
           onClick={() => setOpen(!open)}
         >
           <svg
-            className="fill-current h-3 w-3"
+            className="h-3 w-3 fill-current"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -26,22 +26,35 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${open ? '' : 'hidden' } lg:block`}>
-        <div className="text-sm lg:flex-grow">
-          <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-
-              About
-
+      <div
+        className={` block w-full flex-grow  lg:flex lg:w-auto lg:items-center ${
+          open ? "" : "hidden"
+        } lg:block`}
+      >
+        <div className="text-sm lg:flex lg:flex-grow lg:justify-end">
+          <Link
+            href="/about"
+            className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+          >
+            About
           </Link>
-          <Link href="/projects" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-
-              Projects
-
+          <Link
+            href="/projects"
+            className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+          >
+            Projects
           </Link>
-          <Link href="/contact" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-
-              Contact
-
+          <Link
+            href="/blog"
+            className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+          >
+            Blog
+          </Link>
+          <Link
+            href="/contact"
+            className="mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+          >
+            Contact
           </Link>
         </div>
       </div>

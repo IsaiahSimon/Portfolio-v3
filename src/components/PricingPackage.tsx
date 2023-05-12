@@ -1,12 +1,13 @@
 import React from "react";
+import type { FunctionComponent } from "react";
 
-interface PricingPackageCardProps {
+interface PricingPackageProps {
   packageName: string;
   price: number;
   features: string[];
 }
 
-const PricingPackageCard: React.FC<PricingPackageCardProps> = ({
+const PricingPackage: FunctionComponent<PricingPackageProps> = ({
   packageName,
   price,
   features,
@@ -24,4 +25,4 @@ const PricingPackageCard: React.FC<PricingPackageCardProps> = ({
   );
 };
 
-export default PricingPackageCard;
+export default PricingPackage;

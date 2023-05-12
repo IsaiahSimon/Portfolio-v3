@@ -1,13 +1,14 @@
 import React from "react";
+import type { FunctionComponent } from "react";
 
-interface WorkExperienceCardProps {
+interface WorkExperienceProps {
   companyName: string;
   role: string;
   duration: string;
   description: string;
 }
 
-const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
+const WorkExperience: FunctionComponent<WorkExperienceProps> = ({
   companyName,
   role,
   duration,
@@ -23,4 +24,4 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
   );
 };
 
-export default WorkExperienceCard;
+export default WorkExperience;

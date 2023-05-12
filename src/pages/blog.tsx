@@ -1,14 +1,30 @@
-import React from "react";
-import Layout from "../components/Layout";
+import { type NextPage } from "next";
+import Layout from "~/components/Layout";
+import BlogPostCard from "~/components/BlogPost";
+import { blogPosts } from "../config";
 
-const BlogPage = () => {
+const BlogPage: NextPage = () => {
   return (
-    <Layout>
-      <h1>My Blog</h1>
-      <p>
-        This page will show a list will list out my blog posts, possibly fetched
-        from a database or a static file.
-      </p>
+    <Layout title="Blog - Isaiah Simon">
+      <section>
+        <h1>Blog</h1>
+        <h3 className="mt-5 ">
+          Here you can find my latest posts on development, tech, and more.
+        </h3>
+      </section>
+
+      <section>
+        {/* Map over your blog posts and render a BlogPostCard for each one */}
+        {blogPosts.map((post) => (
+          <BlogPostCard
+            key={post.id}
+            id={post.id}
+            title={post.title}
+            content={post.content}
+            date={post.date}
+          />
+        ))}
+      </section>
     </Layout>
   );
 };

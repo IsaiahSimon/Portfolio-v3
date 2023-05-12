@@ -1,9 +1,21 @@
 import React from "react";
+import type { ReactNode } from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import IconGitHub from "~/components/icons/github";
+import IconTwitter from "~/components/icons/twitter";
+import IconLinkedIn from "~/components/icons/linkedin";
+import Link from "next/link";
+import { socialMedia } from "../config";
+import Spacer from "./Spacer";
 
-const Layout = ({ children, title = "Portfolio" }) => {
+interface LayoutProps {
+  children: ReactNode;
+  title?: string;
+}
+
+const Layout = ({ children, title = "Isaiah Simon" }: LayoutProps) => {
   return (
     <>
       <Head>
@@ -13,9 +25,56 @@ const Layout = ({ children, title = "Portfolio" }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-      <main className="flex flex-col justify-center px-8">{children}</main>
-      <Footer />
+      <div className="relative flex min-h-screen flex-col ">
+        <Navbar />
+        <main className="mx-auto max-w-5xl flex-grow px-4 sm:px-6 lg:px-8">
+          {children}
+        </main>
+        <Footer />
+
+        <div className="fixed bottom-0 left-10 hidden flex-col items-center space-y-4 min-[1150px]:flex ">
+          <Link
+            href={socialMedia.GitHub}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="p-[10px] hover:text-accent"
+          >
+            <IconGitHub />
+          </Link>
+          <Link
+            href={socialMedia.Twitter}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="p-[10px] hover:text-accent"
+          >
+            <IconTwitter />
+          </Link>
+          <Link
+            href={socialMedia.LinkedIn}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="p-[10px] hover:text-accent"
+          >
+            <IconLinkedIn />
+          </Link>
+          <div className="h-[90px] border-l" />
+        </div>
+
+        <div className="fixed bottom-0 right-0 hidden flex-col items-center space-y-4 min-[1150px]:flex  ">
+          <Link
+            href="mailto:isimon.dev@gmail.com"
+            className="rotate-90 font-mono"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span className="text-sm hover:text-accent">
+              isimon.dev@gmail.com
+            </span>
+          </Link>
+          <Spacer height="60px" />
+          <div className="h-[90px] border-r" />
+        </div>
+      </div>
     </>
   );
 };

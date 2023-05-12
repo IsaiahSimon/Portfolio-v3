@@ -1,4 +1,5 @@
 import React from "react";
+import { type NextPage } from "next";
 import Layout from "../components/Layout";
 import FeaturedProject from "~/components/FeaturedProject";
 import Spacer from "~/components/Spacer";
@@ -6,15 +7,18 @@ import Button from "~/components/Button";
 
 import { projects } from "~/config";
 
-const ProjectsPage = () => {
+const ProjectsPage: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="Projects - Isaiah Simon">
       <div className="flex items-center justify-between ">
         <h1 className="mb-6  sm:mb-0">Projects</h1>
         <div>
           <Button href="/blog" label="Blog" variant="primary" />
         </div>
       </div>
+      <h3 className="mt-5 italic text-yellow-300">
+        (Please excuse the appearance. This page is still a work-in-progress)
+      </h3>
       <h3 className="mt-5 ">
         Here you can find my latest posts on development, tech, and more.
       </h3>
@@ -36,16 +40,6 @@ const ProjectsPage = () => {
           </li>
         ))}
       </ul>
-      <Spacer height="35px" />
-      <div className="flex justify-end">
-        <Button
-          label="Say Hello"
-          href="mailto:isimon.dev@gmail.com"
-          rel="noopener noreferrer"
-          target="_blank"
-          variant="secondary"
-        />
-      </div>
     </Layout>
   );
 };

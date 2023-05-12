@@ -10,15 +10,18 @@ const BlogPage: NextPage = () => {
       <div className="flex items-center justify-between ">
         <h1 className="mb-6  sm:mb-0">Blog</h1>
         <div>
-          <Button href="/projects" label="Projects" variant="secondary" />
+          <Button href="/projects" label="Projects" variant="primary" />
         </div>
       </div>
+      <h3 className="mt-5 italic text-yellow-300">
+        (Please excuse the appearance. This page is still a work-in-progress)
+      </h3>
       <h3 className="mt-5 ">
         Here you can find my latest posts on development, tech, and more.
       </h3>
       <Spacer height="40px" />
       <ul>
-        {/* Map over your blog posts and render a BlogPostCard for each one */}
+        {/* Map over your blog posts and render a BlogCard for each one */}
         {blogPosts.map((post) => (
           <li key={post.id}>
             <h3 className="text-slateLight">{post.title}</h3>
@@ -27,15 +30,6 @@ const BlogPage: NextPage = () => {
           </li>
         ))}
       </ul>
-      <Spacer height="35px" />
-      <div className="flex justify-end">
-        <Button
-          label="Say Hello"
-          href="mailto:isimon.dev@gmail.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        />
-      </div>
     </Layout>
   );
 };

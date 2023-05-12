@@ -1,10 +1,11 @@
 import React from "react";
+import { type NextPage } from "next";
 import Button from "~/components/Button";
 import Layout from "~/components/Layout";
 import Spacer from "~/components/Spacer";
 import SpanGradient from "~/components/SpanGradient";
 
-const Contact = () => {
+const Contact: NextPage = () => {
   return (
     <Layout title="Contact - Isaiah Simon">
       <section className="min-h-1/2 flex flex-col items-center justify-center py-2">
@@ -32,8 +33,7 @@ const Contact = () => {
       <section className="flex flex-col items-center justify-center ">
         <h2 className="text-center">
           Are you a<SpanGradient> recruiter </SpanGradient>
-          or a prospective
-          <SpanGradient> client</SpanGradient>?
+          or a<SpanGradient> client</SpanGradient>?
         </h2>
 
         <Spacer height="40px" />

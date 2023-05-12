@@ -7,6 +7,8 @@ interface ButtonProps {
   rel?: string;
   target?: string;
   variant?: "primary" | "secondary";
+  height?: string;
+  width?: string;
 }
 
 const Button: FunctionComponent<ButtonProps> = ({
@@ -15,12 +17,12 @@ const Button: FunctionComponent<ButtonProps> = ({
   rel,
   target,
   variant = "primary",
+  height = "h-[55px]",
+  width = "w-[150px]",
 }) => {
   const styles = {
-    primary:
-      "bg-transparent text-accent border border-accent py-[1.25rem] px-[1.75rem] font-mono hover:bg-accent hover:text-backgroundColor hover:border-backgroundColor",
-    secondary:
-      "bg-transparent text-white border border-white py-[1.25rem] px-[1.75rem] font-mono hover:bg-white hover:text-backgroundColor hover:border-backgroundColor",
+    primary: `bg-transparent text-accent border border-accent ${height} ${width} font-mono hover:bg-accent hover:text-backgroundColor hover:border-backgroundColor`,
+    secondary: `bg-transparent text-white border border-white ${height} ${width} font-mono hover:bg-white hover:text-backgroundColor hover:border-backgroundColor`,
   };
 
   return (
@@ -28,7 +30,7 @@ const Button: FunctionComponent<ButtonProps> = ({
       href={href}
       rel={rel}
       target={target}
-      className={`inline-block min-w-[200px] rounded-lg px-6 py-3 text-center text-sm font-medium transition-colors duration-200 ease-in-out ${styles[variant]}`}
+      className={`align-center flex items-center justify-center rounded-lg text-center text-sm font-medium transition-colors duration-200 ease-in-out ${styles[variant]}`}
     >
       {label}
     </Link>

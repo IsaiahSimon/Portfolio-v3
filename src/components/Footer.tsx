@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="flex h-24 w-full items-center justify-center  ">
       <p className="text-sm text-slateDark">
-        © {new Date().getFullYear()} Designed & Built by Isaiah Simon
+        © {new Date().getFullYear()} Built with care by Isaiah Simon
       </p>
     </footer>
   );

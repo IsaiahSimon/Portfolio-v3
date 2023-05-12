@@ -21,8 +21,8 @@ const Button: FunctionComponent<ButtonProps> = ({
   width = "w-[150px]",
 }) => {
   const styles = {
-    primary: `bg-transparent text-white  border border-accent ${height} ${width} font-mono hover:bg-accent hover:text-white hover:border-backgroundColor  `,
-    secondary: `bg-transparent text-white border border-white ${height} ${width} font-mono hover:bg-white hover:text-backgroundColor hover:border-backgroundColor`,
+    primary: `hover:bg-gradient-to-r from-[#ed5432] via-[#ed6a32] to-orange-400 text-white  border border-accent ${height} ${width} font-mono hover:bg-accent hover:text-white hover:border-backgroundColor `,
+    secondary: `hover:bg-gradient-to-r from-gray-600 via-slateDark to-slateLight bg-transparent text-white border border-white ${height} ${width} font-mono hover:bg-white hover:text-white hover:border-backgroundColor`,
   };
 
   return (
@@ -30,7 +30,7 @@ const Button: FunctionComponent<ButtonProps> = ({
       href={href}
       rel={rel}
       target={target}
-      className={`align-center flex items-center justify-center rounded-lg text-center text-sm font-medium transition-colors duration-200 ease-in-out ${styles[variant]}`}
+      className={`align-center text-md flex items-center justify-center rounded-lg text-center font-medium transition-colors duration-200 ease-in-out ${styles[variant]}`}
     >
       {label}
     </Link>

@@ -2,11 +2,12 @@ import React from "react";
 import Button from "~/components/Button";
 import Layout from "~/components/Layout";
 import Spacer from "~/components/Spacer";
+import SpanGradient from "~/components/SpanGradient";
 
 const Contact = () => {
   return (
     <Layout title="Contact - Isaiah Simon">
-      <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <section className="min-h-1/2 flex flex-col items-center justify-center py-2">
         <h3>What&apos;s Next?</h3>
         <Spacer height="10px" />
         <h1 className="mb-4 text-center text-5xl font-bold md:text-7xl">
@@ -24,7 +25,25 @@ const Contact = () => {
           rel="noopener noreferrer"
           target="_blank"
         />
-      </div>
+      </section>
+
+      <Spacer height="30px" />
+
+      <section className="flex flex-col items-center justify-center ">
+        <h2 className="text-center">
+          Are you a<SpanGradient> recruiter </SpanGradient>
+          or a prospective
+          <SpanGradient> client</SpanGradient>?
+        </h2>
+
+        <Spacer height="40px" />
+        {/* Buttons wrapper */}
+        <div className="flex w-full  items-center justify-center lg:w-full lg:flex-row">
+          <Button href="/recruiters" label="Recruiters" />
+          <Spacer width="30px" height="30px" />
+          <Button href="/clients" label="Clients" variant="secondary" />
+        </div>
+      </section>
     </Layout>
   );
 };

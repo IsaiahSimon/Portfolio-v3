@@ -1,14 +1,20 @@
 import React from "react";
 import Layout from "../../components/Layout";
+import SpanGradient from "~/components/SpanGradient";
+import Spacer from "~/components/Spacer";
 
 const ClientsHomePage = () => {
   return (
     <Layout>
-      <h1>Welcome, Clients</h1>
-      <p>
-        Here, you can find my past client projects, testimonials, pricing
-        packages, process overview, and contact me.
-      </p>
+      <h1>
+        Hello, <SpanGradient>Clients</SpanGradient>!
+      </h1>
+      <Spacer height="20px" />
+      <h3>
+        Here, you can find my past client projects, my process overview,
+        testimonials, pricing packages, and contact me.
+      </h3>
+      <Spacer height="40px" />
       {/* Add more details and functionalities here */}
     </Layout>
   );

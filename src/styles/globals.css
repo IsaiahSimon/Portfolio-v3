@@ -7,11 +7,11 @@ body {
 }
 
 h1 {
-  @apply flex-wrap text-5xl font-semibold tracking-tight text-slateLight sm:text-6xl md:text-7xl lg:text-8xl;
+  @apply flex-wrap text-5xl font-semibold tracking-tight text-slateLight sm:text-6xl;
 }
 
 h2 {
-  @apply flex-wrap text-4xl font-semibold tracking-tight text-slateDark sm:text-5xl md:text-6xl lg:text-7xl;
+  @apply flex-wrap text-4xl font-semibold tracking-tight text-slateDark sm:text-5xl;
 }
 
 h3 {

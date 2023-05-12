@@ -30,11 +30,11 @@ const FeaturedProject: FunctionComponent<FeaturedProjectProps> = ({
         <div className="w-300px h-[300px] bg-red-500" />
         {/* <Image src={imageURL} alt={alt} height={300} width={500} /> */}
       </div>
-      <div className="w-full border lg:w-1/2">
+      <div className="w-full border sm:text-end lg:w-1/2">
         <h3 className="text-base">Featured Project</h3>
         <h2>{title}</h2>
         <p>{description}</p>
-        <ul className="flex flex-wrap gap-5 border p-2">
+        <ul className="flex flex-wrap justify-center gap-5 border p-2">
           {stack.map((tech) => (
             <li className="font-mono text-accent" key={tech}>
               {tech}

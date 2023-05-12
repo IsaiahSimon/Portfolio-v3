@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import IconLogo from "./IconLogo";
 
 interface NavbarProps {
   toggleBlur: () => void;
@@ -18,11 +18,12 @@ const Navbar = ({ toggleBlur }: NavbarProps) => {
     <nav className="flex flex-wrap items-center justify-between  p-6">
       <div className="mr-6 flex flex-shrink-0 items-center  text-white">
         <Link href="/" className="text-xl font-semibold tracking-tight">
-          iSimonDev
+          <IconLogo />
         </Link>
       </div>
 
-      <div className="block  lg:hidden">
+      {/* Mobile menu  icon*/}
+      <div className="block lg:hidden">
         <button
           className="flex items-center rounded  px-3 py-2 text-accent hover:border-white hover:text-white"
           onClick={handleClick}
@@ -51,33 +52,35 @@ const Navbar = ({ toggleBlur }: NavbarProps) => {
           </svg>
         </button>
       </div>
+
+      {/* Desktop menu */}
       <div
-        className={` block w-full flex-grow lg:flex lg:w-auto lg:items-center ${
+        className={` block w-full flex-grow  pr-16 lg:flex lg:w-auto lg:items-center ${
           open ? "" : "hidden"
         } lg:block`}
       >
-        <div className="  text-sm lg:flex lg:flex-grow lg:justify-end">
+        <div className="   text-sm lg:flex lg:flex-grow lg:justify-end">
           <Link
             href="/about"
-            className="mr-4 mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
+            className="mr-4 mt-10 block  text-end text-6xl text-slateLight hover:text-accent sm:text-3xl lg:mt-0 lg:inline-block"
           >
             About
           </Link>
           <Link
             href="/projects"
-            className="mr-4 mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
+            className="mr-4 mt-10 block text-end text-6xl text-slateLight hover:text-accent sm:text-3xl lg:mt-0 lg:inline-block"
           >
             Projects
           </Link>
           <Link
             href="/blog"
-            className="mr-4 mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
+            className="mr-4 mt-10 block text-end text-6xl text-slateLight hover:text-accent sm:text-3xl lg:mt-0 lg:inline-block"
           >
             Blog
           </Link>
           <Link
             href="/contact"
-            className="mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
+            className="mt-10 block text-end text-6xl text-slateLight hover:text-accent sm:text-3xl lg:mt-0 lg:inline-block"
           >
             Contact
           </Link>

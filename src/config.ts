@@ -18,25 +18,53 @@ export const projects = [
   {
     id: 1,
     title: "Project 1",
-    description: "Description for Project 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure esse, maiores rem libero totam.",
     demoURL: "demoURL for Project 1",
     repoURL: "repoURL for Project 1",
+    imageURL: "/profileImg.jpeg",
+    alt: "Project 1 image",
+    stack: [
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "tRPC",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel",
+    ],
     // other project properties...
   },
   {
     id: 2,
     title: "Project 2",
-    description: "Description for Project 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure esse, maiores rem libero totam.",
     demoURL: "repoURL for Project 2",
     repoURL: "repoURL for Project 2",
+    imageURL: "/profileImg.jpeg",
+    alt: "Project 2 image",
+    stack: ["TypeScript", "Next.js", "Node", "Express", "MongoDB", "Netlify"],
     // other project properties...
   },
   {
     id: 3,
     title: "Project 3",
-    description: "Description for Project 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure esse, maiores rem libero totam.",
     demoURL: "repoURL for Project 3",
     repoURL: "repoURL for Project 3",
+    imageURL: "/profileImg.jpeg",
+    alt: "Project 3 image",
+    stack: [
+      "Svelte",
+      "SvelteKit",
+      "TailwindCSS",
+      "TypeScript",
+      "GraphQL",
+      "GraphCMS",
+      "Vercel",
+    ],
     // other project properties...
   },
   // more projects...

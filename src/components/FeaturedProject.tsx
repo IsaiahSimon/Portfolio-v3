@@ -1,7 +1,5 @@
-import Image from "next/image";
 import React from "react";
 import type { FunctionComponent } from "react";
-import Spacer from "./Spacer";
 
 interface FeaturedProjectProps {
   id: number;

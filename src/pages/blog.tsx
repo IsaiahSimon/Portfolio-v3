@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Layout from "~/components/Layout";
-import BlogPost from "~/components/BlogPost";
 import { blogPosts } from "../config";
 import Spacer from "~/components/Spacer";
 import Button from "~/components/Button";

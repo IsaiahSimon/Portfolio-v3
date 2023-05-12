@@ -35,7 +35,7 @@ const AboutPage = () => {
 
       <Spacer height="20px" />
       <p>
-        I'm a software engineer with a passion for web development, a
+        I&apos;m a software engineer with a passion for web development, a
         business-oriented mindset, and an open heart for every industry where I
         can make an impact. I leverage my skills in web development to build
         user-friendly applications.
@@ -56,8 +56,8 @@ const AboutPage = () => {
       <h3>Background</h3>
       <p>
         My background in healthcare has inspired me to use technology to improve
-        several processes, though I'm also excited about opportunities in other
-        sectors as well. I'm enthusiastic about the future and eager to continue
+        several processes, though I&apos;m also excited about opportunities in other
+        sectors as well. I&apos;m enthusiastic about the future and eager to continue
         exploring, learning, and innovating.
       </p>
 

@@ -148,3 +148,30 @@ export const pricingPackage = [
   },
   // more pricingPackages...
 ];
+
+export const credits = [
+  {
+    id: 1,
+    label: "Ashish",
+    websiteURL: "https://asrvd.me/",
+    repoURL: "https://github.com/asrvd/asrvd.me",
+    blogURL:
+      "https://dev.to/asheeshh/i-made-a-full-stack-portfolio-site-using-nextjs-and-tailwind-366d",
+  },
+  {
+    id: 2,
+    label: "Brittany Chiang",
+    websiteURL: "https://brittanychiang.com/",
+    repoURL: "https://github.com/bchiang7/v4",
+  },
+  {
+    id: 3,
+    label: "Lee Robinson",
+    websiteURL: "https://leerob.io/",
+  },
+  {
+    id: 4,
+    label: "OpenSauced",
+    websiteURL: "https://opensauced.pizza/",
+  },
+];

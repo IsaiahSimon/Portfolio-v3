@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import type { ReactNode } from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
@@ -16,6 +16,9 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, title = "Isaiah Simon" }: LayoutProps) => {
+  const [blur, setBlur] = useState(false);
+  const toggleBlur = () => setBlur(!blur);
+
   return (
     <>
       <Head>
@@ -26,8 +29,12 @@ const Layout = ({ children, title = "Isaiah Simon" }: LayoutProps) => {
       </Head>
 
       <div className="relative flex min-h-screen flex-col ">
-        <Navbar />
-        <main className="mx-auto max-w-5xl flex-grow px-4 sm:px-6 lg:px-8">
+        <Navbar toggleBlur={toggleBlur} />
+        <main
+          className={`${
+            blur ? "blur" : ""
+          } mx-auto max-w-5xl flex-grow px-4 sm:px-6 lg:px-8`}
+        >
           {children}
         </main>
         <Footer />
@@ -57,6 +64,7 @@ const Layout = ({ children, title = "Isaiah Simon" }: LayoutProps) => {
           >
             <IconLinkedIn />
           </Link>
+
           <div className="h-[90px] border-l" />
         </div>
 

@@ -21,7 +21,7 @@ const Button: FunctionComponent<ButtonProps> = ({
   width = "w-[150px]",
 }) => {
   const styles = {
-    primary: `bg-transparent text-accent border border-accent ${height} ${width} font-mono hover:bg-accent hover:text-backgroundColor hover:border-backgroundColor`,
+    primary: `bg-transparent text-white  border border-accent ${height} ${width} font-mono hover:bg-accent hover:text-white hover:border-backgroundColor  `,
     secondary: `bg-transparent text-white border border-white ${height} ${width} font-mono hover:bg-white hover:text-backgroundColor hover:border-backgroundColor`,
   };
 

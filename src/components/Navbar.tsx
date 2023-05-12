@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
-const Navbar = () => {
+interface NavbarProps {
+  toggleBlur: () => void;
+}
+
+const Navbar = ({ toggleBlur }: NavbarProps) => {
   const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+    toggleBlur();
+  };
 
   return (
     <nav className="flex flex-wrap items-center justify-between  p-6">
@@ -11,48 +21,63 @@ const Navbar = () => {
           iSimonDev
         </Link>
       </div>
+
       <div className="block  lg:hidden">
         <button
-          className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white"
-          onClick={() => setOpen(!open)}
+          className="flex items-center rounded  px-3 py-2 text-accent hover:border-white hover:text-white"
+          onClick={handleClick}
         >
           <svg
-            className="h-3 w-3 fill-current"
-            viewBox="0 0 20 20"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-12 w-12"
           >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <title>Menu</title>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+                className="fill-accent"
+              ></path>{" "}
+            </g>
           </svg>
         </button>
       </div>
       <div
-        className={` block w-full flex-grow  lg:flex lg:w-auto lg:items-center ${
+        className={` block w-full flex-grow lg:flex lg:w-auto lg:items-center ${
           open ? "" : "hidden"
         } lg:block`}
       >
-        <div className="text-sm lg:flex lg:flex-grow lg:justify-end">
+        <div className="  text-sm lg:flex lg:flex-grow lg:justify-end">
           <Link
             href="/about"
-            className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+            className="mr-4 mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
           >
             About
           </Link>
           <Link
             href="/projects"
-            className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+            className="mr-4 mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
           >
             Projects
           </Link>
           <Link
             href="/blog"
-            className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+            className="mr-4 mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
           >
             Blog
           </Link>
           <Link
             href="/contact"
-            className="mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+            className="mt-4 block text-end text-6xl text-slateLight hover:text-accent lg:mt-0 lg:inline-block"
           >
             Contact
           </Link>

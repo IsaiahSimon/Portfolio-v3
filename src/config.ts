@@ -17,20 +17,20 @@ export const socialMedia = {
 export const projects = [
   {
     id: 1,
-    title: "Project 1",
+    title: "Post Trail",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure esse, maiores rem libero totam.",
-    demoURL: "demoURL for Project 1",
-    repoURL: "repoURL for Project 1",
-    imageURL: "/profileImg.jpeg",
-    alt: "Project 1 image",
+      "This application is to provide users with an easy way to track their Post Trail packages and mail.",
+    demoURL: "https://posttrail.vercel.app/",
+    repoURL: "https://github.com/IsaiahSimon/post-trail",
+    imageURL: "/postTrailImg.jpg",
+    alt: "Post trail website image",
     stack: [
       "TypeScript",
       "Next.js",
       "TailwindCSS",
-      "tRPC",
       "Prisma",
       "PostgreSQL",
+      "Clerk",
       "Vercel",
     ],
     // other project properties...

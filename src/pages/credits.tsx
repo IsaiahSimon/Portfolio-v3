@@ -11,7 +11,7 @@ const CreditsPage: NextPage = () => {
       <div className="flex items-center justify-between ">
         <h1 className="mb-6  sm:mb-0">Credits</h1>
         <div>
-          <Button href="/" label="Home" variant="secondary" />
+          <Button href="/" label="Home" variant="primary" />
         </div>
       </div>
       <h3 className="mt-5 ">

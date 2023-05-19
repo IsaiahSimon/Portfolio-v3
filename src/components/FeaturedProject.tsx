@@ -1,5 +1,8 @@
 import React from "react";
 import type { FunctionComponent } from "react";
+import IconGitHub from "./icons/github";
+import IconLogo from "./IconLogo";
+import Spacer from "./Spacer";
 
 interface FeaturedProjectProps {
   id: number;
@@ -40,8 +43,15 @@ const FeaturedProject: FunctionComponent<FeaturedProjectProps> = ({
           ))}
         </ul>
 
-        <a href={demoURL}>View demo</a>
-        <a href={repoURL}>View repo</a>
+        <div className="flex justify-end">
+          <a href={demoURL} target="_blank" rel="noopener noreferrer">
+            <span className="text-3xl">Demo</span>
+          </a>
+          <Spacer width="12px" />
+          <a href={repoURL} target="_blank" rel="noopener noreferrer">
+            <span className="text-3xl">Repo</span>
+          </a>
+        </div>
       </div>
     </div>
   );

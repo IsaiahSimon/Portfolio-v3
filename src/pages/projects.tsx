@@ -17,7 +17,7 @@ const ProjectsPage: NextPage = () => {
         </div>
       </div>
       <h3 className="mt-5 italic text-yellow-300">
-        (Please excuse the appearance. This page is still a work-in-progress)
+        (Please excuse the appearance. Update in progress...)
       </h3>
       <h3 className="mt-5 ">
         Here you can find my latest posts on development, tech, and more.
@@ -26,7 +26,7 @@ const ProjectsPage: NextPage = () => {
       <ul className="flex flex-col gap-10">
         {/* Map over your projects and render a Project for each one */}
         {projects.map((project) => (
-          <li className="border-8 border-blue-500" key={project.id}>
+          <li className="" key={project.id}>
             <FeaturedProject
               id={project.id}
               title={project.title}

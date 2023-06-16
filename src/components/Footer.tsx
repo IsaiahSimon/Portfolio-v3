@@ -6,9 +6,8 @@ const Footer = () => {
     <footer className="flex h-24 w-full items-center justify-center">
       <div className="w-1/3"></div>
       <span className="w-1/3 text-center text-sm text-slateDark">
-        © {new Date().getFullYear()} Built with care by{" "}
         <Link href="/about" className="cursor-pointer hover:text-accent ">
-          Isaiah Simon
+          © {new Date().getFullYear()} Built with care by Isaiah Simon
         </Link>
       </span>
       <span className="w-1/3 text-center text-sm text-slateDark hover:text-accent">

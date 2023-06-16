@@ -4,7 +4,7 @@
 export const email = "isimon.dev@gmail.com";
 
 export const profileImg = {
-  url: "/profileImg.jpeg",
+  url: "/profileImg.png",
   alt: "Isaiah Simon's profile picture",
 };
 
@@ -17,13 +17,32 @@ export const socialMedia = {
 export const projects = [
   {
     id: 1,
+    title: "ParcelPulse",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure.",
+    demoURL: "repoURL for Project 2",
+    repoURL: "https://github.com/IsaiahSimon/parcelpulse",
+    imageURL: "/postTrailImg.jpg",
+    alt: "ParcelPulse project image",
+    stack: [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Maven",
+      "Hibernate",
+      "Vercel",
+    ],
+    // other project properties...
+  },
+  {
+    id: 2,
     title: "Post Trail",
     description:
-      "This application is to provide users with an easy way to track their Post Trail packages and mail.",
+      "Frontend client application to provide users with an easy way to track their Post Trail packages and mail.",
     demoURL: "https://posttrail.vercel.app/",
     repoURL: "https://github.com/IsaiahSimon/post-trail",
     imageURL: "/postTrailImg.jpg",
-    alt: "Post trail website image",
+    alt: "PostTrail project image",
     stack: [
       "TypeScript",
       "Next.js",
@@ -36,34 +55,21 @@ export const projects = [
     // other project properties...
   },
   {
-    id: 2,
-    title: "Project 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure esse, maiores rem libero totam.",
-    demoURL: "repoURL for Project 2",
-    repoURL: "repoURL for Project 2",
-    imageURL: "/profileImg.jpeg",
-    alt: "Project 2 image",
-    stack: ["TypeScript", "Next.js", "Node", "Express", "MongoDB", "Netlify"],
-    // other project properties...
-  },
-  {
     id: 3,
-    title: "Project 3",
+    title: "Nikki Diamanté",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure esse, maiores rem libero totam.",
-    demoURL: "repoURL for Project 3",
-    repoURL: "repoURL for Project 3",
-    imageURL: "/profileImg.jpeg",
-    alt: "Project 3 image",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quos impedit ad quia sequi, fugit dolorem! Quod est repellat iure.",
+    demoURL: "https://nikkidiamante.com/",
+    repoURL: "https://github.com/IsaiahSimon/nikki-diamante-2.0",
+    imageURL: "/postTrailImg.jpg",
+    alt: "Nikki Diamanté project image",
     stack: [
-      "Svelte",
-      "SvelteKit",
-      "TailwindCSS",
       "TypeScript",
-      "GraphQL",
-      "GraphCMS",
-      "Vercel",
+      "Next.js",
+      "React.js",
+      "TailwindCSS",
+      "HTML",
+      "Netlify",
     ],
     // other project properties...
   },

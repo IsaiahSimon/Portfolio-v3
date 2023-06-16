@@ -28,7 +28,7 @@ const FeaturedProject: FunctionComponent<FeaturedProjectProps> = ({
     <div className="flex flex-col border lg:flex-row">
       <div className="w-full border lg:w-1/2">
         {/* Placeholder for project image */}
-        <div className="w-300px h-[300px] bg-red-500" />
+        <div className="w-300px h-[300px] bg-accent" />
         {/* <Image src={imageURL} alt={alt} height={300} width={500} /> */}
       </div>
       <div className="w-full border sm:text-end lg:w-1/2">
